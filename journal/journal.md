@@ -146,8 +146,6 @@ The plan for the project sees the top painted in black and white checkers, like 
 
 ![Image](flowchartbottomright.jpg)
 
-![Image](missingimage.png)
-
 ## Process documentation ##
 <!--- In this section, include text and images (and potentially links to video) that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.
 
@@ -157,6 +155,7 @@ The plan for the project sees the top painted in black and white checkers, like 
 
 <!---There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. --->
 
+### Prototype of Project ###
 The whole progress began by adding the extension for servo into the microbit code. From there, it began by designing a timer to be counting down to 0, whilst testing the servo to be working. In order to do this, I had the timer count down from 15 seconds and have the servo react when reaching zero. However, upon the very first test, the servo struggled to turn when reaching 0. Thankfully, at least the wires connected were correct, which was discovered through the servo motor still vibrating. This problematic code can be seen beneath:
 
 ![Image](1stfail.jpg)
@@ -239,7 +238,32 @@ Even the plan to include the entire game inside the microbit box, where it is sm
 
 ![Image](box.jpg)
 
-## CONTINUTE BELOW HERE ##
+### Final Project Development ###
+The beginning of making the final project begins with painting the inventor's microbit box with checkers of black and white. It all started with checking cupboards within the house for paint and brushes. What came up was finding black body paint and white make up paint, as a result of halloween. I outlined the areas of which were being painted with a white pencil on the cardboard box to attempt to stay within those lines. First up, I was painting the box in black the checkers on top to cover the words and on the surrounding sides and bottom of box. However, I did not colour in the front sideas this would be the area of where the servo will work and I have yet to figure out how to make it work appropriatly, so I decided not to paint this section.
+
+The next step sees the use of the white makeup paint in the bottom right corner. However, after waiting 5 minutes there was no sign of this paint type drying in order to coat it again to ensure that the words on the box would disappear. As well as having no sign of it ever going to dry in order to continue. This lead to having to grab a tissue and wipe the white 'paint' off the box and going out to the nearest newsagency and buying new white paint. With this new paint, I painted and each of the checkered boxes, waited it for to dry before repainting over it. This process was repeated until the words underneath the paint are no longer seen. The result of which the box currently stands at can be seen below:
+
+![Image](checkeredbox.jpg)
+
+#### Puzzle 2 ####
+From there, I remade Puzzle 2 onto the breadboard and program into the microbit from following the above information of what I did correct and wrong. I had also disconnected the breadboard from the mounting plate and unscrewed the edge connector breakout board. This breadboard had the bottom sticky taped together so the pieces wouldn't fall out or be disconnected, before being blu-tacked onto a yellow piece of cardboard paper. 
+
+![Image](remadepuzzle2.JPG)
+
+From there, I thought of ways of how to get these LEDs to be able to be put through the cardboard without having to be connected to the breadboard - of which other wires are going to be connected to for other puzzles. This led to trialling connecting the resistor, male-to-male jumper wires and the LED together with sticky tape to position the ends to be together. However, this did not work and I really struggled to ensure that the ends were actually touching before taping them together. When undoing the sticky tape, I replaced it with alfoil to have the wires at least touch this and share the current through this to the other wire end. And to ensure that the alfoil stays there, I sticky taped the alfoil to stay with the wire. When this was tested, it proved to work as intended.
+
+https://www.youtube.com/watch?v=43eV9AC2dpE&feature=youtu.be
+
+Knowing that this worked, I also made it for an orange and green LED and added this to the breadboard. With the intentions of having all four LED's being used with the microbit and for Puzzle 2's memory game. However, when I moved to the next stage of adding the buttons in, the microbit only allowed 3 pin input's instead of the desired four. So the green LED is removed (planned to readd later to be acting as the indicator that this puzzle is complete). 
+This time, I have aligator clips to connect the breadboard and microbit to the new touch buttons and ground, instead of having to sticky tape them together and hope that they remain intact. I also tested the new touch buttons by having all three different buttons connected. One of the buttons is a piece of toliet roll cut up and covered in alfoil, another is a piece of toliet roll cut up and only has alfoil on one side and the last button is just a loose piece of alfoil.
+This has been done to decide would be a better suit to puzzle 2 and the best acting touch button that would work ontop of the cardboard box. 
+
+https://youtu.be/vsfhhKasv8I
+
+To end puzzle 2, I added a function into the code. The use of this function allows the microbit to turn on, but not activate the sequence of LED lights until the user chooses to start the puzzle - by pressing any button, and having that button lead to calling the function to play. This working code can be seen below:
+
+![Image](function-puzzle2.JPG)
+
 
 ## Final code ##
 
