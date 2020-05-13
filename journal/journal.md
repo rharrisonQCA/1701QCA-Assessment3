@@ -248,7 +248,7 @@ The next step sees the use of the white makeup paint in the bottom right corner.
 #### Puzzle 2 ####
 From there, I remade Puzzle 2 onto the breadboard and program into the microbit from following the above information of what I did correct and wrong. I had also disconnected the breadboard from the mounting plate and unscrewed the edge connector breakout board. This breadboard had the bottom sticky taped together so the pieces wouldn't fall out or be disconnected, before being blu-tacked onto a yellow piece of cardboard paper. 
 
-![Image](remadepuzzle2.JPG)
+![Image](remadepuzzle2.png)
 
 From there, I thought of ways of how to get these LEDs to be able to be put through the cardboard without having to be connected to the breadboard - of which other wires are going to be connected to for other puzzles. This led to trialling connecting the resistor, male-to-male jumper wires and the LED together with sticky tape to position the ends to be together. However, this did not work and I really struggled to ensure that the ends were actually touching before taping them together. When undoing the sticky tape, I replaced it with alfoil to have the wires at least touch this and share the current through this to the other wire end. And to ensure that the alfoil stays there, I sticky taped the alfoil to stay with the wire. When this was tested, it proved to work as intended.
 
