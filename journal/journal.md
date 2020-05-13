@@ -5,19 +5,60 @@
 <!--- Markdown reference: https://guides.github.com/features/mastering-markdown/ --->
 
 ## Related projects ##
-<!--- Find about 6 related projects to the project you choose. A project might be related through  function, technology, materials, fabrication, concept, or code. Don't forget to place an image of the related project in the appropriate folder and insert the filename in the appropriate places below. Copy the markdown block of code below for each project you are showing. --->
 
-### *Insert name of related project here* ###
+### Related project 1 ###
+PuzzleBox
 
-<!--- Modify code to insert image of related project below --->
-![Image](missingimage.png)
+https://create.arduino.cc/projecthub/arduino/puzzlebox-c1f374?ref=search&ref_id=puzzle&offset=0
 
-<!--- Fill out name and link to related project in the code below. --->
-[Name of related project](https://[URL of related project])
+![Image](openingbox.jpg)
 
-<!--- Include information about why this project is related to yours. --->
+This project is related to mine because I would like the outcome of my game box to have a reward for solving the puzzle/problem. AS a result of this, this project is related to mine through the technology used and the function of said technology. For in both projects, a servo is used to unlock the box, revealing the reward for resolving the problem at hand. These servo’s horns would only be activated once the user completes or solves the problem through the use of lights, buttons, etc. to eventually activate the servo horns to activate and open. Therefore, this project is related to mine through its similarities of technology, function and concept. 
 
-<!--- Repeat code above for a total of 6 related projects --->
+### Related project 2 ###
+Electronic Puzzle Box uses only Discrete Components
+
+https://hackaday.com/2014/05/14/electronic-puzzle-box-uses-only-discrete-components/
+
+![Image](dice.png)
+
+This project is related to mine through its concept of various puzzles for the user to solve in order to open the dice container. For my project, the user will be asked to accomplish various puzzles like obtaining a specific colour, all lights to be on or off, reaching zero or a certain number while each button adjusts in random variables. However, this project also uses the tilt function of the program, which would be cool to implement into my project as a problem to solve somehow. These lead this project to be related to mine through its concept, technology and fabrication.
+
+### Related project 3 ###
+"Bomb" Diffuse Game
+
+https://ramenboii.weebly.com/vis-147a/final-project-bomb-diffuse-game
+
+![Image](bombgame.jpg)
+
+This project is related to mine through it’s materials, concept and code. These can be seen through the use of a separate breadbox from the mounting plate, LEDs, cardboard and paper. The cardboard and paper in this project help with the aesthetic of the game, while my project will use this combination to form a box and be decorated with paper to be aesthetically pleasing. While this project requires the user to disconnect wires to disarm, the concept and code are similar to my game box. They are similar through having a set timer to solve the problems before the box remains forever “locked”. As well as having the same concept of having to do something to get an outcome. For this project the outcome is to prevent the bomb blowing up, while my project sees a container to open up. These projects are led to be related together through material, function and code. 
+
+### Related project 4 ###
+Turning Lock Puzzle
+
+https://create.arduino.cc/projecthub/krishnalalith/turning-lock-puzzle-356d56?ref=search&ref_id=puzzle&offset=4
+
+![Image](lockpuzzle.jpg)
+
+This project is related to mine due to the code used and the function that it leads to. In this project, when an individual digit is changed, the neighbours (left and right) of this digit are also changed. The function of this project sees that the user is required to change the numbers into the correct combination, with this project acting as a luggage lock. These are related to my project as I aimed to implement this type of number change into the game box, but with changing the surrounding numbers in various variable adjustments. As well as having this problem would take the user one step closer to solving the box and getting it open. As a result of this, these projects are related through concept, code and function of project.
+
+### Related project 5 ###
+Keep Talking and Nobody Explodes - Physical Edition
+
+http://www.dillonlareau.com/projects/KTANE_physical
+
+![Image](keeptalking.jpg)
+
+This project is related to mine as it gave inspiration to create my own project. These two projects are also related through fabrication of projects. For this project, there is a section of the ‘bomb’ that requires the user to use their memory with the implemented lights to disarm a section. However, for this project it uses more materials and technology than what I have access to. As a result of this, it is planned to use the LED’s and alfoil to develop my own version of a pattern for the user to memorise and replicate. In the end, these projects are related through concept and fabrication as a result of inspiration.
+
+### Related project 6 ###
+Interactive Toddler Music Box Toy
+
+https://create.arduino.cc/projecthub/68284/interactive-toddler-music-box-toy-2c8dcf?ref=search&ref_id=box&offset=28
+
+![Image](musicbox.jpg)
+
+This project is related to mine through its fabrication. For starters, it is planned to design my project first with cardboard and paper to ensure the concept, technology and everything words correctly and accurately. From there, it is planned to put holes into the cardboard in order to have the LED and buttons accessible to the user ontop of the cardboard. This provides for the project to cover the wiring beneath the cardboard where it cannot be easily tangled. 
 
 ## Other research ##
 <!--- Include here any other relevant research you have done. This might include identifying readings, tutorials, videos, technical documents, or other resources that have been helpful. For each particular source, add a comment or two about why it is relevant or what you have taken from it. You should include a reference or link to each of these resources. --->
