@@ -83,27 +83,135 @@ From this tutorial, I have taken that a breadboard is not completely necessary t
 ## Conceptual development ##
 
 ### Design intent ###
-<!--- Include your design intent here. It should be about a 10 word phrase/sentence. --->
+A game that intends for the user to improve their problem solving skills.
 
 ### Design ideation ###
-<!--- Document your ideation process. This will include the design concepts presented for assessment 2. You can copy and paste that information here. --->
+
+### Design concept 1 ###
+![Image](concept1.jpg)
+
+This concept attempts to use all the empty space around the rectangle box. Thus leading sections of the puzzle to be spaced out. When the user presses Button A, the microbit checks to see if each puzzle has been solved. If deemed that the user has, the servo horns will be activated and the user will have access to the reward that they can also see through the plastic on the side of the box. However, if deemed unsolved, the LED screen will show a locked symbol and the servo horns will remain deactivated. 
+
+If the user chooses to press button B, all progress made on each puzzle will be reset. 
+
+### Design concept 2 ###
+![Image](concept2pic.jpg)
+
+![Image](concept2info.jpg)
+
+When all four lights are on, the user will be required to press Button A to double check. From there, if the microbit deems that the user has completed all puzzle stages, the servo horn will be activated and at the bottom of the hexogon, the compartment will open to reveal the reward inside. At the same time, the LED screen of the microbit will have the unlocked symbol present. If the microbit deems that the user hasn't complete all the stages, the LED screen will remain to show a locked symbol.
 
 ### Final design concept ###
 <!--- This should be a description of your concept including its context, motivation, or other relevant information you used to decide on this concept. --->
 
+![Image](concept3pic.jpg)
+
 ### Interaction flowchart ###
-<!--- Include an interaction flowchart of the interaction process in your project. Make sure you think about all the stages of interaction step-by-step. Also make sure that you consider actions a user might take that aren't what you intend in an ideal use case. Insert an image of it below. It might just be a photo of a hand-drawn sketch, not a carefully drawn digital diagram. It just needs to be legible. --->
+
+![Image](flowchart.jpg)
+
+![Image](flowcharttopleft.jpg)
+
+![Image](flowcharttopright.jpg)
+
+![Image](flowchartbottomleft.jpg)
+
+![Image](flowchartbottomright.jpg)
 
 ![Image](missingimage.png)
 
 ## Process documentation ##
 <!--- In this section, include text and images (and potentially links to video) that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.
 
-This should have quite a lot of information! It will likely include most of the process documentation from assessment 2 which can be copied and pasted here.
+<!---This should have quite a lot of information! It will likely include most of the process documentation from assessment 2 which can be copied and pasted here. --->
 
-Use subheadings to structure this information. See https://guides.github.com/features/mastering-markdown/ for details of how to insert subheadings.
+<!--Use subheadings to structure this information. See https://guides.github.com/features/mastering-markdown/ for details of how to insert subheadings.
 
-There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. --->
+<!---There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. --->
+
+The whole progress began by adding the extension for servo into the microbit code. From there, it began by designing a timer to be counting down to 0, whilst testing the servo to be working. In order to do this, I had the timer count down from 15 seconds and have the servo react when reaching zero. However, upon the very first test, the servo struggled to turn when reaching 0. Thankfully, at least the wires connected were correct, which was discovered through the servo motor still vibrating. This problematic code can be seen beneath:
+
+![Image](1stfail.jpg)
+
+Instead of fixing up this code, I moved on to beginning the prototype for the startup of the puzzle game box. This progress began by creating each puzzle corner's variable (labelled 1 through to 4) to be accessible when user presses button A to check if it can be unlocked. This was tested by setting the variable to "1", in other words "solved", by having this change the variable when button A and B are pressed together. After pressing the two buttons together, the program was checked by pressing A to check if the variables would work and unlock the compartment. The result of setting this startup leaves it easy to add the code into the end of solving each puzzles to easily turn on their corner LED's and already have the connection to button A and the compartment ready. 
+
+![Image](workingstartup.jpg)
+
+After setting that up, I revisited the previous timer and servo code with new eyes to discover that the code was wrong. The fixed code can be seen below, along with a youtube video link to see the code in action: 
+
+![Image](workingcodeservo.jpg)
+
+VIDEO LINK: https://youtu.be/_ln-1XZwHl0
+
+The code was fixed to get the servo horns to move when the timer reached zero. After this was completed, this code could be copied into the startup code I had already started, thus making button B set up for the timer. 
+
+After copying the code into the startup, I finished the rest of the necessarities. This included setting the button A and B pressed together to reset the puzzles LED to unsolved, timer to begin again and to restart the countdown. Also made the timer countdown from 5 minutes, with the intentions of coming back to include the alarm buzzer sounds at a later time.
+
+
+The next step began Puzzle 1 prototype construction.
+The whole process began by following the set-up steps of exercise 10, but with swapping the placement of where the LED and buttons are. However, when adding the code previously made to test the new placement of technology, it did not operate. The new placement of technology can be seen below:
+
+![Image](newposition.jpg)
+
+After this saddening discovery, the actual steps were taken and the technology got moved back to their old positions. From there, the previously made code was again tested and saw success of the program. The following steps see manipulation of this exercise to add the spindle and suit the puzzle more. This meant the attempt of combining exercise 10 and 3 together. This combination is below:
+
+![Image](combination.jpg)
+
+However, it did not lead to any results other than the LED randomly flashing. Through, as a quick resolution, the microbit and laptop were unplugged from eachother, the RGB LED was pushed down and both the laptop and microbit were replugged. This process saw the red of the LED shine brightly, but did nothing when the button was pressed or the spindle was turned. Also, the randomly flashing of the LED was not resolved either.
+
+After further studying the javascript of exercise 10, I attempt to write the code I want. I had then turned that newly made javascript into blocks and tested that:
+
+![Image](firsttestfail.JPG)
+
+Although, no progress was made as the previously mentioned errors were still occuring. With the exception of when the button was pressed, the red light flickered a little before it went back to its previous state. 
+
+The next test was to check if the spindle was actually working amongst all the wires and other technology components. This was undertaken by replacing the RGB light with a regular red LED. The result of this saw the LED instantly turn on and do what the RGB light was previously doing. 
+
+To accurately test the spindle, I placed the previously made exercise 3 code into the microbit. Even when this was finished transferring, the red LED still instantly turned on. The button no longer worked, (though it was programmed to another pin within the previously made code). When the spindle was turned clockwise, nothing happened until it reached the very end of its spin. The LED screen produced a LED screen error (seen below), yet did not dim the red LED at all. 
+
+![Image](spindleerror.jpg)
+
+I reset the exercise 3 code, replacing it with the previous code I was working on that saw the combination of 10 and 3. From there, I edited the javascript and got rid of the flashing LED errors. As a result of this, the button no longer works, the RGB (replaced the red LED) light remained on and the spindle error still appeared when turning it all the way clockwise. 
+
+![Image](redflickers.JPG)
+
+After long fiddling with the javascript and block code, going back and forth (below is a photo of how back and forth this went) between what might work or not, I finally got the red on the RGB LED to turn on and off with the spindle. Although, to turn the light on and off, the spindle had to be turned all the way anti-clockwise to work. Even the button assisted by turning the red RGB LED to turn on and off. Now the next step is to try to attempt to get this to work for the other two colours. Below sees the code that allowed the red RGB LED to work, and the video that shows the code in action.
+
+![Image](backandforth.JPG)
+
+![Image](workingcodeforred.JPG)
+
+VIDEO LINK: https://youtu.be/yvCPzAfJxvo
+
+The code of the red RGB LED was copied and replaced with the functions for the blue LED to appear. This correctly worked, just like the red one. However, the green did decide to make an unannounced appearance without being told to through code. This is an error I couldn't figure out. Also, due to not having enough wires at the time of this testing, I had to test the green LED through pressing button A. The steps taken to copy the red LED code were taken again and adjusted to fit the green LED. Below is a test of all three colours on video. Obviously it is a prototype, so in the future, the extra colour that has appeared will be solved easily. For the meantime, the puzzle can work as intended. 
+
+Final Code: 
+![Image](workingcodesortof.JPG)
+
+VIDEO LINK: https://youtu.be/ETBmdsR4X_Y
+
+The next step of physical experimentation begins with puzzle 2. 
+This begins with placing onto the breadboard two different lights that can be programmed within the microbit to turn on in a pattern. For the meantime, I attempted to get the microbit to have the lights change between the two first and unlock from there. I intially attempted to add arrays into this, but I had to make sure that the concept idea of having a pattern that the user needs to repeat would work. As a result, the code below is what was tried first, followed by the video of this code in action.
+
+![Image](workingcode.JPG)
+
+VIDEO LINK: https://youtu.be/OwOoXOTEbdc
+
+In order to make sure that this puzzle could work to the concept idea at hand, the next step sees the fabrication of aluminium foil being used as a button for the microbit. With this aluminium foil, I had cut toliet paper rolls into pieces to act as a motion of a button - where one pushes down and it pushes back up. As a result of this, the code had to be adjusted from pressing button A and B to pressing a pin that I hoped would work with pressing toliet paper roll onto a non-stable sticktaped strip of aluminium foil on my desk. The code chosen was:
+
+![Image](workingcodealfoil.JPG)
+
+At first, the test saw only one toliet paper roll button tested, to ensure that it could work. If it didn't I would have to rethink what else could be substituted as a make-shift button for this project. When it did, the second pressed button was added and below can see the outcome of this decision.
+
+VIDEO LINK: https://youtu.be/qUDkW-_eqpw
+
+As a result of these two puzzles being created, even as prototypes to the final project, it proves that this whole project is completely possible. With the use of aluminium foil, it is possible to create a border for a makeshift operation, while the buzzer puzzle is similar to puzzle 1. 
+
+Even the plan to include the entire game inside the microbit box, where it is small, compact and easily accessible. It can be deemed as an appropriate container to maintain the project.
+
+![Image](box.jpg)
+
+## CONTINUTE BELOW HERE ##
 
 ## Final code ##
 
@@ -111,6 +219,17 @@ There will likely by a dozen or so images of the project under construction. The
 
 ## Design process discussion ##
 <!--- Discuss your process used in this project, particularly with reference to aspects of the Double Diamond design methodology or other relevant design process. --->
+The design process all began by being bored within the house whilst in social distancing and quarantine rules are put in place. As a result, taking from experience the discover aspect of the Double Diamond began by brainstorming ideas that could help in these troubling times. A few ideas consisted of asking family members how would they like to keep occupied within this time. These answers came through as reading, gaming or watching television quite frequently. As a result of this, initally the design project was planned to be a self-turning machine for books, so you would just press a button and the technology would turn your page for you. However, as a result of the define phase of the Double Diamond, this idea of a project didn't help to tackle the idea of keeping active or occupying oneself physically. 
+
+This lead to having to come up with a whole new design intent and design concept. After some time looking over the notes I had gathered, I had come up with the idea of creating something that could keep one active and test out current skills whilst possibly improving them. This lead to the idea of board games that require a user to participate, think and possibly even communicate with others, if possible and depending on the game. 
+
+From there, the develop stage saw various versions of board games that could keep one activated. Some took inspiration from the 'Bop It' game where reaction skills are tested, or having to connect similar colours together without crossing like 'Flow Free' but a realistic verison. Another good concept took inspiration from the 'Keep talking and nobody explodes' video game, where it sees two people working together to solve problems on a bomb within the time limit. However, due to restrictions on social distancing and rules needing to be followed, it was required that I had to develop an concept idea that saw problems or puzzles solved by oneself. This is where the Puzzle Game Box came about. As it takes into consideration that people might not have access to other people, thus allowing oneself to test their own problem solving skills on the Game Box. 
+
+During this develop state of the Double Diamond, I had to make sure that each puzzle was different. In order to ensure that they were different and I wasn't being biased, I had to ask surrounding family members for their thoughts. At the same time, I enquired if there was any time of puzzle/game that they would be interested in playing if they were to play this Puzzle Game Box. Such feedback sees a measuring game, where the user would have to put specific blocks onto the box to acquire the desired weight without knowing how much a block weighs in order to solve. Another feedback sees somesort of rendition/updated version of 'Operation', which I have taken into account. 
+
+The next step of the design process sees the delivery of ideas, testing and discovering how it all works together. For my design process, this was accomplished through creating the prototypes of my puzzle ideas. As a result of this, it is discovered that I will require more wires in order to connect everything together, thus I had to look elsewhere on how to fill this void. This research lead to discovering that I could still produce the puzzles with the use of aluminium foil to create buttons and connect wires when done correctly. Although, during this delivery stage of the Double Diamond, trial and error takes a big aspect of this stage. As without trial and error, there is no further development in the project and you cover all bases, such as any type of user input that might be used that has not been planned for. 
+
+## CONTINUE HERE ##
 
 
 ## Reflection ##
