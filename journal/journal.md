@@ -1,4 +1,4 @@
-# 1701QCA Final project journal: *Insert your name here*
+# 1701QCA Final project journal: Rebecca Harrison
 
 <!--- As for other assessments, fill out the following journal sections with information relevant to your project. --->
 
@@ -263,6 +263,74 @@ https://youtu.be/vsfhhKasv8I
 To end puzzle 2, I added a function into the code. The use of this function allows the microbit to turn on, but not activate the sequence of LED lights until the user chooses to start the puzzle - by pressing any button, and having that button lead to calling the function to play. This working code can be seen below:
 
 ![Image](function-puzzle2.JPG)
+
+#### Puzzle 1 ####
+Began by relocating the prototype from Journal 2 in order to recreate Puzzle 1 onto the same breadboard as where Puzzle2's wires are currently connected to. 
+![Image](buttonamongstwires.jpg)
+
+This process started with testing a button switch to see if it would still complete its job with all the wires already plugged in. Thankfully, it worked and allowed an easy transition from the breadboard to having the button's wires extended and connected together with alfoil and sticky tape to have it stay together. 
+
+![Image](extendedbutton.jpg)
+
+The above process was also repeated two more times to make three useable buttons for puzzle 1 before being placed in position onto the breadboard. After they were placed, I had conducted a test with the microbit that focused solely on making sure that each button worked. The below code was tested, and turned out successful.
+
+![Image](codetotestbuttons.JPG)
+
+Following the success of the buttons leads to the implementation of the RGB LED on the breadboard and into the microbit code. In order to keep the puzzles sectioned together and have enough space for other puzzles if needed, the placement of the wires of the LED were planned out. This can be seen below, with the squares being the placement of the switch buttons and the x's being where the wires for LED are planned to go. 
+
+![Image](drawingofplacement.jpg)
+
+From there, the next step sees having the RGB LED extended in order to have it go through the lid of the puzzle box. This extension sees sticky tape and aluminium foil to connect the resistors and wires together in an attempt to be stable. 
+
+![Image](extendedRGBLED.jpg)
+
+Once this production is complete, the LED and buttons were tested together to ensure that nothing had broken or come apart in the process. In order to test this, the code from experiment 10 in the microbit kit was tested and succeeded. This then leads to the final incorporation of puzzle 1, adding the finger spindle and potentiometer.
+
+At this point, things were looking to be a success and I had written a plan of what to do for the rest of the day:
+- connect spindle to microbit/ breadboard
+- get correct code
+- test
+- extend the spindle (to later go above the box)
+- test everything is still connected and working
+- connect wires to microbit with puzzle 2
+- combine both code together
+- add startup code (from prototype) into above combination
+- add green LEDs?
+
+However, things did not go to plan at all. It was a real struggle to successfully get the spindle involved with the LED and buttons and working appropriately. Another problem whilst going through this sees wires being disconnected from each other, leading to more envolvement of sticky tape to restrain the wires from moving away from eachother. 
+
+![Image](stuckLED.jpg)
+
+Yet another problem sees even the littlest of movement out of position from the spindler/potentiometer cuts out the power to the LED or flickers it. This gave false hope at first that I had gotten some progress and was getting closer to getting the LED to dim or brighter, however this was not the case at all. From 4.31pm to 6.30pm, saw this problem being tackled without any progress.
+
+VIDEO LINK: 
+
+It was decided by 6.30pm to start the code over again and to try a different approach. So the first approach took inspiration from the experiment 10 and attempted to incorporate the spindle and have the voltage change according to the analogRead produced. Though, this was a fail. The new attempt sees the below code, that was restarted, to finally have feedback and progress of having the spindle work for this puzzle. However, it only worked a little bit by changing the brightness of colour, although it is a start in progressing to the final. Unfortunately, with this feedback, only one colour is activated and changed when first pressed with the button. At the same time, no other colour can mix or can the first pressed colour be turned off with the button. 
+
+Code that gave feedback:
+![Image](code-withfeedbackofspindle.JPG)
+
+VIDEO LINK:
+
+After a lot of back-and-forth in an attempt to resolve the above issues, I couldn't get the code, spindle or LED to work together or at least to meet the planned intentions. As a result of this, I have come up with a new gameplan for puzzle1: 
+
+![Image](newgameplan.jpg)
+
+This new gameplan was proving to be a success and was heading in the right direction. THe proof of a good start for this can be seen in the video below.
+
+VIEDO LINK: 
+
+Then everything fell apart after that. The wires taped together for the LED had pushed the alfoil together and had the LED malfunctioning, as in only remaining on one colour and dimming from there. Which is what I had wanted previously before the new game plan, but still was unable to change to another colour to dim or brighten that. As a result of this, I had cut the wires out of that sticky tape to put new alfoil on the wires and separate them with a lot of space. After this was finished, a button had become disconnected from the bottom of the switch. This took the most time in attempting to get the button back together in working condition, because I was trying to wrap the alfoil and wire together in a ball. Though, the switch kept escaping and breaking through the alfoil due to the curving of the end legs. 
+
+After setting these all back up, I had tested the current state of puzzle 1. The results were chaotic. It began with the blue light shining through the LED without having touched any buttons. But when I picked up the RGB LED from sitting on the table, it had changed to a high green colour. At least the spindle was attached, as it was constantly dimming the LED light when it switched between the blue and green on where it was held. During all this, not once did the red LED appear.
+
+The fact that I had spent so much time on the above in attempts to get the spindle to work with the code, I had decided to move on. The plan was to see if I had any more ideas on how to approach and tackle puzzle 1 after completing other pieces of work. As well as if I could come up with any other kind of puzzle that bests suits the material and wires that I currently have. 
+
+
+
+
+
+
 
 
 ## Final code ##
