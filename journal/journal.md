@@ -1,9 +1,5 @@
 # 1701QCA Final project journal: Rebecca Harrison
 
-<!--- As for other assessments, fill out the following journal sections with information relevant to your project. --->
-
-<!--- Markdown reference: https://guides.github.com/features/mastering-markdown/ --->
-
 ## Related projects ##
 
 ### Related project 1 ###
@@ -147,13 +143,6 @@ The plan for the project sees the top painted in black and white checkers, like 
 ![Image](flowchartbottomright.jpg)
 
 ## Process documentation ##
-<!--- In this section, include text and images (and potentially links to video) that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.
-
-<!---This should have quite a lot of information! It will likely include most of the process documentation from assessment 2 which can be copied and pasted here. --->
-
-<!--Use subheadings to structure this information. See https://guides.github.com/features/mastering-markdown/ for details of how to insert subheadings.
-
-<!---There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. --->
 
 ### Prototype of Project ###
 The whole progress began by adding the extension for servo into the microbit code. From there, it began by designing a timer to be counting down to 0, whilst testing the servo to be working. In order to do this, I had the timer count down from 15 seconds and have the servo react when reaching zero. However, upon the very first test, the servo struggled to turn when reaching 0. Thankfully, at least the wires connected were correct, which was discovered through the servo motor still vibrating. This problematic code can be seen beneath:
@@ -326,12 +315,121 @@ After setting these all back up, I had tested the current state of puzzle 1. The
 
 The fact that I had spent so much time on the above in attempts to get the spindle to work with the code, I had decided to move on. The plan was to see if I had any more ideas on how to approach and tackle puzzle 1 after completing other pieces of work. As well as if I could come up with any other kind of puzzle that bests suits the material and wires that I currently have. 
 
+#### Puzzle 4 ####
+The process of this puzzle begins by recycling the buttons from the failed puzzle 1. It begins by testing that they still work and are still connected after leaving them alone over night. Thankfully, they work still. 
 
+Though, I did change one of the buttons to be connected via a male-to-female wire instead of having to use alfoil to connect to the breadboard. The feedback for this came back that the button works periodically and doesn't at the same time. 
 
+![Image](newbutton.jpg)
 
+The next steps sees adding the buzzer into the breadboard and microbit code. The plan: when someone presses the button, the buzzer plays a tune. The attempt begins with just one button at first, to ensure that it works first before adding the rest of the wires and equipment to make up the entire puzzle.
 
+This is the code that was first tested:
 
+![Image](workingcode-buzzwhenpressed.JPG)
 
+Note: The blank LED's are there due to the LED screen flickering and is there in an attempt to prevent the flashes from occuring. This problem was discovered during the testing of the buttons at the start of the production.
+
+The test proved that the code and wiring to the microbit are working together to produce the desired effect.
+VIDEO LINK:
+
+From there, the rest of the buttons are added in and given a sound to play when the associated button is pressed.
+
+The next step involves the pattern of which the user will have to reproduce by listening to the sounds produced to get the correct order. It begins by having a certain button pressed to initate the pattern. For this puzzle, the right most button is the starter button. At first it will play the tune, giving a user the chance to hear it. From there, they have to sort through the buttons to make sure that the order is correct. For the mean time, all that is coded is the sequence and set tones to each button.
+
+VIDEO LINK:
+^Sequence played and tunes to the button.
+Code: ![Image](finalcodebeforelock.JPG)
+
+However, in order to succeed there needs to be a type of lock put in place for this puzzle. To ensure that they are selecting the correct order before sending off to the other microbit that it is solved. As a result of this, the math feature of the microbit code comes to play. A variable was set first and on start up of the puzzle, has each variable set to 0. For every time that a button is pressed, the code shall count that number. 
+
+Initally, it was believed that this would work successfully as a lock on the order. However, after looking at the math on a piece of paper after trying different versions, an 'if' statement had to be included into the code to check that the previous button pressed was the correct one. 
+
+![Image](mathcheck.jpg)
+
+If it isn't, the code shall call to the function 'fail'. Which reveals a dun-dun-da (common failure sound) and resetting the puzzle to the start. As in, the user will have to click the starting button again to hear the sequence and go again. 
+
+When the user has completed the correct sequence, the function 'success' is called upon. This function plays a success sound and sends a radio value over to the other microbit to tell it that the puzzle has been solved. 
+
+Code: ![Image](puzzle4finalcode.JPG)
+
+Final Look of Puzzle4:
+![Image](finalpuzzle4.jpg)
+
+#### Puzzle 3 ####
+Here, with this puzzle, I had the most fun putting it together. 
+
+The progress begins with gathering a material that would best stay in shape and fit within the small container box. Therefore, this saw the second microbit package have its lid come off and be used as material to form shapes. 
+
+![Image](microbitcontainer.jpg)
+
+Of this material, I had cut small squares out to try and build a cube with an open lid. Below can see the starting attempt, with the alfoil wrapped around it to later be coded for when someone hits against the walls/floor. 
+
+![Image](startingsquare.jpg)
+
+In order to test if the idea of puzzle 3 worked, I had the above 'square' and made a tool, like kitchen tongs, out of skewers and wrapped two in alfoil before joining them together at the top. At the top of this tool, I have clipped an aligator clip, thus allowing the microbit code to detect if the tongs have hit a 'square' wall. 
+
+Code: 
+![Image](tongstestcode.JPG)
+Look of Tongs: 
+![Image](alfoiltongs.jpg)
+In use: VIDEO LINK
+
+After this, I thought of a better way to create the square for this puzzle. The idea is still to use the material of the microbit container, but instead is a large strip of a rectangle. This rectangle is then shaped into square shape without having any of its sides disconnected. When this was done, I measured the bottom space and cut out a new piece of cardboard to place there. At the same time of wanting to have all the sides connected, it was desired to have all the alfoil be connected to one Pin. This lead to the alfoil wrapping around the sides of the square and then tucking the bottom piece into it, before stickytaping it all up. 
+
+FROM: 
+![Image](cardboardsquare.jpg)
+
+TO:
+![Image](alfoilsquare.jpg)
+
+However, after testing this. I discovered a better way to have this puzzle operate. Instead, the tongs will be the ground, while the bottom of the alfoil square will be a pin, as well as the sides of the square. In summary, I switched them around. I removed the bottom square out of the alfoil pocket it was in. The next step included having sticky tape on the bottom edges of the sides - in an attempt to stop the sides and base from touching. For the tongs, all I did was change the aligator clips connected to them. I also extended the tongs by connecting female-to-female wires together and sticky taping them together. This became a much better subsitute that taping up male-to-male wires with eachother while being wrapped in alfoil.
+
+New Setup for Square:
+![Image](newalfoilsquare.jpg)
+
+In order to finalise this puzzle, I made a ball of alfoil for the user to remove from the square. This sees the alfoil ball be removed from the base, which will trigger the code to suggest that a button has been set off - producing a low sound. While, if the user chooses to hit the sides, will recieve a higher sound played. At the same time, the user will need to get the ball off the button at least once, but have the sound produce twice. Although, if the user hits the sides more than 15 times, they have failed the puzzle. 
+
+When the user has succeeded, that is when the radio signal will be sent to the other microbit. 
+
+Code for Puzzle3:
+![Image](codeforpuzzle3.jpg)
+
+#### Combining Puzzles ####
+The next stage sees the completion of every puzzle and needs to be grouped together. For example, puzzle 3 and 4 are needed to be joined together in order to be put onto the second microbit. While the startup from the prototype assignment needs to be combined with puzzle 2. 
+
+During this combination, I needed to set up the lock for puzzle 2. This lock sees something similar to puzzle 4, which I am thankful for as it made going the trial and error progress a bit smoother. 
+
+When each puzzle is combined together, the 'forever' and 'onstart' functions needed to be joined together otherwise it would not work. As well as both puzzles had to have the radio function set up and working. As a result of it working, it would end up activitating the servo functions.
+
+In order to ensure that I fully understood the concept of the radio functions, I took part in the firefly exercise and sending strings back-and-forth between both microbits. This had to be done, as initially the radio function was not working between both microbits when each puzzle was combined together.
+
+In the end, this was resolved by having puzzle 3 and puzzle 4 both be resolved first before sending over to the other microbit just a number. Thus the other microbit just needs to have a 'recievednumber' function and have the two variables of puzzle 3 and 4 set to 1 as a result of this recieved. At the same time, the timer had to be removed from the entire project because it blocked actions from happening - such as the start of puzzle 2 (red light flashing). The timer also played a part in affecting the radio feature. 
+
+Finally, when this was removed, a user can freely press A and will have the unlock feature occur. 
+
+#### Adding into the Box ####
+The next process of the Puzzle Box is a struggle. This process sees the breadboard, microbit, wires, LED's, aligator clips and battery pack be placed inside the box. At the same time, I have to ensure that no wires are disconnected. While at the same time, when adding the holes into the top of the box with a box cutter, that I don't accidentally cut any wires. 
+
+It was decided to use an empty toliet paper roll as the buttons for puzzle 2, as they had the most bounce back in the house when discovered. However, when I went to add this into the box, I had forgotten about the aligator clips and having to need them to connect. As a result of this, some of the cardboard is going inside the box whilst being covered in alfoil to be able to be connected to an aligator clip successfully. 
+
+When I got everything into the box in regards to the first microbit, thats when the problems arose. The yellow LED had decided to slowly disconnect from its wires, and the ground pin had become disconnected. This all had happened even before having to turn the microbit and its edge connector around. 
+
+Once I had turned the microbit and the edge connector around, in order to cut out a section in the middle of the box, I had disconnected a lot more wires. These wires had become disconnected when I went to stablise the microbit in place with a cardboard backing and taped to the roof of the box. It backfired and the LED's no longer worked, nor the ground (as the alfoil had shifted). In the meantime, I reconnected the wires I found back together and placed the microbit in the corner to deal with after I place the other microbit and breadboard inside the box.
+
+![Image](microbit1inbox.jpg)
+
+When I cut into the box for puzzle 4, I may of cut the switches spots a bit too wide and by wiggling for space with the box cutter. This lead to having to sticky tape the bottom of the switches to the roof of the box. This is an attempt to secure the switches from falling into the box when a user clicks. At the same time, I didn't cut a big enough hole for the buzzer, to either be seen or heard. But at least it is secure with sticky tape holding it to the roof of the box.
+
+![Image](microbit2inboxpuzzle4.jpg)
+
+Thankfully, when it came to adding the next puzzle, there was plenty of space in the bottom-left corner to add the cardboard square. It was also a success in cutting a hole in the roof that perfectly shows the inside of the alfoil square and ball. From there, the square also had to be sticky taped to the roof of the box to ensure that it stays in place. At the same time, the tongs are being left outside of the box and are checked to have enough room for the wires to move with the user's movements. 
+
+![Image](microbit2inboxpuzzle3.jpg)
+
+The final step sees a yellow cardboard piece be measured to the length of the box and cut out with scissors. It was then written on with permanent black marker 'CONGRATULATIONS' before it was taped to the floor of the box. To also ensure its restriction on movement, the left and ride sides are sticky taped from the back as well. 
+
+![Image](congratulations.jpg)
 
 ## Final code ##
 
