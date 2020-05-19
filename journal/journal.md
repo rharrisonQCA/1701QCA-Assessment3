@@ -438,8 +438,13 @@ The final step sees a yellow cardboard piece be measured to the length of the bo
 ![Image](congratulations.jpg)
 
 ## Final code ##
+#### Startup and Puzzle 2 - Microbit 1 ####
+![Image](startupandpuzzle2.png)
 
-<!--- Include here screenshots of the final code you used in the project if it is done with block coding. If you have used javascript, micropython, C, or other code, include it as text formatted as code using a series of three backticks ` before and after the code block. See https://guides.github.com/features/mastering-markdown/ for more information about that formatting. --->
+#### Puzzle 3 and Puzzle 4 - Microbit 2 ####
+![Image](puzzle3and4part1.png)
+
+![Image](puzzle3and4part2.png)
 
 ## Design process discussion ##
 <!--- Discuss your process used in this project, particularly with reference to aspects of the Double Diamond design methodology or other relevant design process. --->
