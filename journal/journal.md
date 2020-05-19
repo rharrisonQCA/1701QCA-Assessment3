@@ -57,7 +57,6 @@ https://create.arduino.cc/projecthub/68284/interactive-toddler-music-box-toy-2c8
 This project is related to mine through its fabrication. For starters, it is planned to design my project first with cardboard and paper to ensure the concept, technology and everything words correctly and accurately. From there, it is planned to put holes into the cardboard in order to have the LED and buttons accessible to the user ontop of the cardboard. This provides for the project to cover the wiring beneath the cardboard where it cannot be easily tangled. 
 
 ## Other research ##
-<!--- Include here any other relevant research you have done. This might include identifying readings, tutorials, videos, technical documents, or other resources that have been helpful. For each particular source, add a comment or two about why it is relevant or what you have taken from it. You should include a reference or link to each of these resources. --->
 ### DIY Micro:bit Reaction Game ###
 
 https://www.youtube.com/watch?v=217aTDpQda4
@@ -293,6 +292,8 @@ However, things did not go to plan at all. It was a real struggle to successfull
 Yet another problem sees even the littlest of movement out of position from the spindler/potentiometer cuts out the power to the LED or flickers it. This gave false hope at first that I had gotten some progress and was getting closer to getting the LED to dim or brighter, however this was not the case at all. From 4.31pm to 6.30pm, saw this problem being tackled without any progress.
 
 VIDEO LINK: 
+[![Image](previewvideo5.JPG)](https://youtu.be/PyCAEVr8KGY)
+
 
 It was decided by 6.30pm to start the code over again and to try a different approach. So the first approach took inspiration from the experiment 10 and attempted to incorporate the spindle and have the voltage change according to the analogRead produced. Though, this was a fail. The new attempt sees the below code, that was restarted, to finally have feedback and progress of having the spindle work for this puzzle. However, it only worked a little bit by changing the brightness of colour, although it is a start in progressing to the final. Unfortunately, with this feedback, only one colour is activated and changed when first pressed with the button. At the same time, no other colour can mix or can the first pressed colour be turned off with the button. 
 
@@ -300,14 +301,16 @@ Code that gave feedback:
 ![Image](code-withfeedbackofspindle.JPG)
 
 VIDEO LINK:
+[![Image](previewvideo4.JPG)](https://youtu.be/qISuDHv4gjY)
 
 After a lot of back-and-forth in an attempt to resolve the above issues, I couldn't get the code, spindle or LED to work together or at least to meet the planned intentions. As a result of this, I have come up with a new gameplan for puzzle1: 
 
 ![Image](newgameplan.jpg)
 
-This new gameplan was proving to be a success and was heading in the right direction. THe proof of a good start for this can be seen in the video below.
+This new gameplan was proving to be a success and was heading in the right direction. The proof of a good start for this can be seen in the video below.
 
-VIEDO LINK: 
+VIDEO LINK: 
+[![Image](previewvideo3.JPG)](https://youtu.be/wUX_JOi_g4Y)
 
 Then everything fell apart after that. The wires taped together for the LED had pushed the alfoil together and had the LED malfunctioning, as in only remaining on one colour and dimming from there. Which is what I had wanted previously before the new game plan, but still was unable to change to another colour to dim or brighten that. As a result of this, I had cut the wires out of that sticky tape to put new alfoil on the wires and separate them with a lot of space. After this was finished, a button had become disconnected from the bottom of the switch. This took the most time in attempting to get the button back together in working condition, because I was trying to wrap the alfoil and wire together in a ball. Though, the switch kept escaping and breaking through the alfoil due to the curving of the end legs. 
 
@@ -332,12 +335,14 @@ Note: The blank LED's are there due to the LED screen flickering and is there in
 
 The test proved that the code and wiring to the microbit are working together to produce the desired effect.
 VIDEO LINK:
+[![Image](previewvideo2.JPG)](https://youtu.be/1XgNSUZ3hDA)
 
 From there, the rest of the buttons are added in and given a sound to play when the associated button is pressed.
 
 The next step involves the pattern of which the user will have to reproduce by listening to the sounds produced to get the correct order. It begins by having a certain button pressed to initate the pattern. For this puzzle, the right most button is the starter button. At first it will play the tune, giving a user the chance to hear it. From there, they have to sort through the buttons to make sure that the order is correct. For the mean time, all that is coded is the sequence and set tones to each button.
 
-VIDEO LINK:
+VIDEO LINK: 
+[![Image](previewvideo.JPG)](https://youtu.be/zPlsDFEkn_4)
 ^Sequence played and tunes to the button.
 Code: ![Image](finalcodebeforelock.JPG)
 
@@ -373,7 +378,8 @@ Code:
 ![Image](tongstestcode.JPG)
 Look of Tongs: 
 ![Image](alfoiltongs.jpg)
-In use: VIDEO LINK
+In use: 
+[![Image](alfoiltongs.jpg)](https://youtu.be/LBXL6e3Agck)
 
 After this, I thought of a better way to create the square for this puzzle. The idea is still to use the material of the microbit container, but instead is a large strip of a rectangle. This rectangle is then shaped into square shape without having any of its sides disconnected. When this was done, I measured the bottom space and cut out a new piece of cardboard to place there. At the same time of wanting to have all the sides connected, it was desired to have all the alfoil be connected to one Pin. This lead to the alfoil wrapping around the sides of the square and then tucking the bottom piece into it, before stickytaping it all up. 
 
