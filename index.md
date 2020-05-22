@@ -12,7 +12,7 @@ The Puzzle Box is a checkered box that has 3 different puzzles for someone to te
 ![Image](secondaryimage.JPG)
 
 #### PROJECT VIDEO ####
-[![Image](stillyoutubevideo.JPG)](https://youtu.be/X0RexNFUNzo )
+[![Image](stillyoutubevideo.JPG)](https://youtu.be/cHeqvcsO-GU)
 
 ### Journal ###
 
